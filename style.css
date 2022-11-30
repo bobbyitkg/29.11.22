@@ -1,23 +1,29 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  background-image: url(./background.webp);
-  background-size: 400px;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Staatliches', cursive;
   font-size: 20px;
+  background-image: url(./bg.jpg);
+  background-size: 200px;
+  color: rgb(74, 25, 25);
 }
 
-.container {
+h1 {
+  text-shadow: 5px 5px tomato;
+}
+
+.container { /* задать ширину и выровнять по середине */
   max-width: 980px;
   margin: 0 auto;
 }
-.row {
+.row { /* строка */
   display: flex;
   flex-wrap: wrap;
 }
 [class^="col"] {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .col-1 {
   flex: 8.3% 0 0;
@@ -57,24 +63,26 @@ body {
 }
 
 .card {
-  box-shadow: 10px 10px 0 tomato;
   background-color: white;
-  margin-bottom: 30px;
   border: 1px solid tomato;
-  transition: all 50ms ease-out;
+  box-shadow: 5px 5px 0 0 tomato;
+  transform: rotate(1deg);
+  transition: all 100ms ease-in;
+
+  margin-bottom: 15px;
 }
 .card:hover {
-  transform: scale(1.05) rotate(-2deg);
-}
-.card.card-horizonal {
-  display: flex;
+  transform: rotate(-2deg) scale(1.05);
 }
 .card .card-image {
   width: 100%;
 }
-.card.card-horizonal .card-image {
-  width: 30%;
-}
 .card .card-content {
   padding: 10px 15px;
+}
+.card.card-horizonal {
+  display: flex;
+}
+.card.card-horizonal .card-image {
+  width: 30%;
 }
